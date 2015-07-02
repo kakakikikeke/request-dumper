@@ -5,6 +5,7 @@ It dumps request info using [sinatra](http://www.sinatrarb.com/).
 Execute
 -------
 
+* Sinatra
 ```
 bundle install
 bundle exec ruby app.rb
@@ -12,8 +13,19 @@ bundle exec ruby app.rb
 
 It was listened to 4567 port on your server.
 
+* Rack
+
+```
+bundle install
+bundle exec rackup config.ru -o 0.0.0.0
+```
+
+It was listened to 9292 port on your server.
+
 Test
 ----
+
+If you start the server using rack, change to port 9292.
 
 * GET
 
