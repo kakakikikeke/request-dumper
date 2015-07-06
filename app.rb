@@ -38,7 +38,7 @@ def get_request
     #:host => request.host,                     # "example.com"
     #:get => request.get?,                      # true (similar methods for other verbs)
     :form_data => request.form_data?,           # false
-    #:header => request[],                      # value of SOME_HEADER header
+    :headers => request.env.select { |k, v| k.start_with?('HTTP_') },
     #:referer => request.referer,               # the referer of the client or '/'
     #:user_agent => request.user_agent,         # user agent (used by :agent condition)
     #:cookies => request.cookies,               # hash of browser cookies
