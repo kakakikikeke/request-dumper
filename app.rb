@@ -23,6 +23,11 @@ delete '/*' do
   get_request
 end
 
+options '/*' do
+  content_type :json
+  get_request
+end
+
 def get_request
   request_info = {
     :body => request.body.read,                 # request body sent by the client (see below)
