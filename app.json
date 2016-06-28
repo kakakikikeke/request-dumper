@@ -1,0 +1,11 @@
+{
+  "name": "request-dumper",
+  "description": "Dumping HTTP request data (body and header and so on)",
+  "keywords": [
+    "ruby",
+    "sinatra",
+    "rack"
+  ],
+  "addons": [],
+  "env": {}
+}

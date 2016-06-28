@@ -22,6 +22,12 @@ bundle exec rackup config.ru -o 0.0.0.0
 
 It was listened to 9292 port on your server.
 
+* Heroku
+
+Deploy this app into your heroku account.  
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kakakikikeke/request-dumper)
+
 Test
 ----
 
