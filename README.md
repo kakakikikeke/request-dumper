@@ -28,6 +28,22 @@ Deploy this app into your heroku account.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kakakikikeke/request-dumper)
 
+* Docker
+
+Build myself
+
+```
+docker build -t yourname/request-dumper
+docker run -p 49160:4567 -d yourname/request-dumper
+```
+
+From Docker Hub
+
+```
+docker pull kakakikikeke/request-dumper
+docker run -p 49160:4567 -d kakakikikeke/request-dumper
+```
+
 Test
 ----
 
