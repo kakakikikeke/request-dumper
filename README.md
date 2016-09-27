@@ -5,14 +5,6 @@ It dumps request info using [sinatra](http://www.sinatrarb.com/).
 Execute
 -------
 
-* Sinatra
-```
-bundle install
-bundle exec ruby app.rb
-```
-
-It was listened to 4567 port on your server.
-
 * Rack
 
 ```
