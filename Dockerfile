@@ -8,6 +8,7 @@ WORKDIR /app
 COPY Gemfile /app/Gemfile
 COPY app.rb /app/app.rb
 COPY config.ru /app/config.ru
+COPY helper/request-helper.rb /app/helper/request-helper.rb
 
 EXPOSE 4567
 RUN bundle install
