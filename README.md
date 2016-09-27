@@ -25,7 +25,7 @@ Deploy this app into your heroku account.
 Build myself
 
 ```
-docker build -t yourname/request-dumper
+docker build -t yourname/request-dumper ./
 docker run -p 49160:4567 -d yourname/request-dumper
 ```
 
