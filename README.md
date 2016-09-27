@@ -39,13 +39,13 @@ docker run -p 49160:4567 -d kakakikikeke/request-dumper
 Test
 ----
 
-If you start the server using rack, change to port 9292.
+For starting a process on local machine.
 
 * GET
 
 ```
 curl -X GET \
-  http://hostname:4567/test?hoge=fuga
+  http://hostname:9292/test?hoge=fuga
 ```
 
 You get the below json response.
@@ -67,7 +67,7 @@ You get the below json response.
 
 ```
 curl -X POST \
-  http://hostname:4567/test \
+  http://hostname:9292/test \
   -d '{"hoge":"fuga"}' \
   -H "Content-Type: application/json"
 ```
