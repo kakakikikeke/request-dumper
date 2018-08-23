@@ -10,6 +10,6 @@ COPY app.rb /app/app.rb
 COPY config.ru /app/config.ru
 COPY helper/request-helper.rb /app/helper/request-helper.rb
 
-EXPOSE 4567
+EXPOSE 8080
 RUN bundle install
-CMD ["bundle", "exec", "rackup", "config.ru", "-o", "0.0.0.0", "-p", "4567"]
+CMD ["bundle", "exec", "rackup", "config.ru", "-o", "0.0.0.0", "-p", "8080"]

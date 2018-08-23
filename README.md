@@ -26,7 +26,7 @@ Build myself
 
 ```
 docker build -t yourname/request-dumper ./
-docker run -p 49160:4567 -d yourname/request-dumper
+docker run -p 49160:8080 -d yourname/request-dumper
 ```
 
 From Docker Hub
