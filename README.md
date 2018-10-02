@@ -93,6 +93,15 @@ You get the below json response.
 }
 ```
 
+* Bonus
+
+You can show the app metrics for prometheus.
+
+```
+curl -X GET \
+  http://hostname:9292/metrics
+```
+
 # Version
 
 * Ruby 2.2.0p61
