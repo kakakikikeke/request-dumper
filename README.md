@@ -1,11 +1,8 @@
-What's this
------------
+# request-dumper
 It dumps request info using [sinatra](http://www.sinatrarb.com/).
 
-Execute
--------
-
-* Rack
+# How to use
+## Rack
 
 ```
 bundle install
@@ -14,26 +11,28 @@ bundle exec rackup config.ru -o 0.0.0.0
 
 It was listened to 9292 port on your server.
 
-* Heroku
+## Docker
+
+```
+docker build -t kakakikikeke/request-dumper ./
+docker run -p 9292:9292 -d kakakikikeke/request-dumper
+```
+
+## Heroku
 
 Deploy this app into your heroku account.  
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kakakikikeke/request-dumper)
 
-* Docker
-
-Build myself
+## Heroku Container Registry
 
 ```
-docker build -t yourname/request-dumper ./
-docker run -p 49160:4567 -d yourname/request-dumper
-```
-
-From Docker Hub
-
-```
-docker pull kakakikikeke/request-dumper
-docker run -p 49160:4567 -d kakakikikeke/request-dumper
+heroku container:login
+heroku create -a test-app-20181002
+docker build -f Dockerfile-for-heroku-container -t registry.heroku.com/test-app-20181002/web .
+docker push registry.heroku.com/test-app-20181002/web
+heroku container:release web
+heroku open -a test-app-20181002
 ```
 
 Test

@@ -10,6 +10,5 @@ COPY app.rb /app/app.rb
 COPY config.ru /app/config.ru
 COPY helper/request-helper.rb /app/helper/request-helper.rb
 
-EXPOSE 9292
 RUN bundle install
-CMD ["bundle", "exec", "rackup", "config.ru", "-o", "0.0.0.0"]
+CMD bundle exec rackup config.ru -o 0.0.0.0 -p $PORT
