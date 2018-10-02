@@ -1,7 +1,7 @@
 # request-dumper
 It dumps request info using [sinatra](http://www.sinatrarb.com/).
 
-# How to use
+# How to build
 ## Rack
 
 ```
@@ -14,7 +14,7 @@ It was listened to 9292 port on your server.
 ## Docker
 
 ```
-docker build -t kakakikikeke/request-dumper ./
+docker build -f Dockerfile-local -t kakakikikeke/request-dumper ./
 docker run -p 9292:9292 -d kakakikikeke/request-dumper
 ```
 
@@ -35,8 +35,15 @@ heroku container:release web
 heroku open -a test-app-20181002
 ```
 
-Test
-----
+## Google App Engine
+
+```
+git clone https://github.com/kakakikikeke/request-dumper.git
+cd request-dumper
+gcloud app deploy
+```
+
+# How to use
 
 For starting a process on local machine.
 
@@ -86,8 +93,7 @@ You get the below json response.
 }
 ```
 
-Version
--------
+# Version
 
 * Ruby 2.2.0p61
 * Gem 2.4.6
