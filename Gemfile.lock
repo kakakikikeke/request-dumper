@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     mustermann (1.0.2)
+    prometheus-client (0.8.0)
+      quantile (~> 0.2.1)
+    quantile (0.2.1)
     rack (2.0.5)
     rack-protection (2.0.1)
       rack
@@ -16,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  prometheus-client
   sinatra (>= 1.4.6)
 
 BUNDLED WITH
