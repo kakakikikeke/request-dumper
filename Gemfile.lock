@@ -1,19 +1,19 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    mustermann (1.0.2)
-    prometheus-client (0.8.0)
+    mustermann (1.0.3)
+    prometheus-client (0.9.0)
       quantile (~> 0.2.1)
     quantile (0.2.1)
-    rack (2.0.5)
-    rack-protection (2.0.1)
+    rack (2.0.6)
+    rack-protection (2.0.5)
       rack
-    sinatra (2.0.1)
+    sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.1)
+      rack-protection (= 2.0.5)
       tilt (~> 2.0)
-    tilt (2.0.8)
+    tilt (2.0.9)
 
 PLATFORMS
   ruby
