@@ -15,7 +15,7 @@ It was listened to 9292 port on your server.
 
 ```
 docker build -f Dockerfile-local -t kakakikikeke/request-dumper ./
-docker run -p 9292:9292 -d kakakikikeke/request-dumper
+docker run -p 9292:8080 -d kakakikikeke/request-dumper
 ```
 
 ## Heroku
