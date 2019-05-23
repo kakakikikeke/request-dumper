@@ -6,6 +6,10 @@ class RequestDumperApp < Sinatra::Base
   set :bind, '0.0.0.0'
   helpers RequestHelper
 
+  configure :production, :development do
+    enable :logging
+  end
+
   get '/*' do
     content_type :json
     get_request

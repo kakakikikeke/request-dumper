@@ -25,6 +25,7 @@ module RequestHelper
       #:secure => request.secure?,                # false
       #:env => request.env                        # raw env hash handed in by Rack
     }
+    logger.info request_info
     return request_info.to_json
   end
 end
