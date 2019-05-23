@@ -11,5 +11,6 @@ COPY config.ru /app/config.ru
 COPY helper/request-helper.rb /app/helper/request-helper.rb
 
 EXPOSE 9292
+RUN gem install bundler
 RUN bundle install
 CMD ["bundle", "exec", "rackup", "config.ru", "-o", "0.0.0.0"]
