@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  request-dumper:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-04-05T12:36:08.938030605+09:00"
+    description: A Helm chart for Kubernetes
+    digest: c903b9b9b96523e25e06795ad7504e870391171bd7743c3b52d9398e0e338641
+    name: request-dumper
+    type: application
+    urls:
+    - http://kakakikikeke.github.io/request-dumper/request-dumper-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-05T12:36:08.937225626+09:00"
