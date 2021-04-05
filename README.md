@@ -43,6 +43,17 @@ cd request-dumper
 gcloud app deploy
 ```
 
+## k8s
+
+[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/request-dumper)](https://artifacthub.io/packages/search?repo=request-dumper)
+
+```
+helm repo add request-dumper http://kakakikikeke.github.io/request-dumper/
+helm repo update
+helm search repo request-dumper
+helm install request-dumper request-dumper/request-dumper
+```
+
 # How to use
 
 For starting a process on local machine.
