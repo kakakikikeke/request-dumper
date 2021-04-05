@@ -1,6 +1,6 @@
 apiVersion: v2
 name: request-dumper
-description: A Helm chart for Kubernetes
+description: It dumps request info using sinatra.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
