@@ -6,9 +6,12 @@ module Prometheus
 
       def respond_with(format)
         guage = @registry.metrics.first
-        guage.set({
-          name: :my_site
-        }, online?)
+        guage.set(
+          online?,
+          labels: {
+            name: :my_site
+          }
+        )
         super
       end
 
