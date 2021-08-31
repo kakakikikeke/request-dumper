@@ -1,14 +1,13 @@
-FROM ruby:3
+FROM ruby:3.0.0
 
-RUN gem install bundler
-
-COPY . /app
 WORKDIR /app
 
 COPY Gemfile /app/Gemfile
 COPY app.rb /app/app.rb
 COPY config.ru /app/config.ru
 COPY helper/request-helper.rb /app/helper/request-helper.rb
+COPY helper/custom_controller.rb /app/helper/custom_controller.rb
+COPY helper/custom_exporter.rb /app/helper/custom_exporter.rb
 
 EXPOSE 8080
 RUN gem install bundler

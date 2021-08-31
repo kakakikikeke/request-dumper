@@ -14,8 +14,8 @@ It was listened to 9292 port on your server.
 ## Docker
 
 ```
-docker build -f Dockerfile-local -t kakakikikeke/request-dumper ./
-docker run -p 9292:8080 -d kakakikikeke/request-dumper
+docker build -f Dockerfile -t kakakikikeke/request-dumper ./
+docker run -p 8080:8080 -d kakakikikeke/request-dumper
 ```
 
 ## Heroku
@@ -115,6 +115,6 @@ curl -X GET \
 
 # Version
 
-* Ruby 2.2.0p61
+* Ruby 3.0.0
 * Gem 2.4.6
 * Other libraries version confirm to Gemfile
