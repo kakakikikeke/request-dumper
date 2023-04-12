@@ -18,7 +18,9 @@ GEM
     method_source (1.0.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nokogiri (1.14.2-x86_64-darwin)
+    nokogiri (1.14.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     parallel (1.22.1)
     parser (3.2.1.1)
@@ -86,6 +88,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   prometheus-client
