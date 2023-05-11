@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './app'
 require './helper/custom_controller'
 require './helper/custom_exporter'
