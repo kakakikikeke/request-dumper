@@ -1,9 +1,10 @@
-# A sample Gemfile
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-gem 'sinatra', '>=1.4.6'
-gem 'thin'
+source 'https://rubygems.org'
+
 gem 'prometheus-client'
-gem 'solargraph'
 gem 'pry'
 gem 'pry-doc'
+gem 'sinatra', '>=1.4.6'
+gem 'solargraph'
+gem 'thin'
