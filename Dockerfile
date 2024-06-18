@@ -1,6 +1,8 @@
-FROM ruby:3.1.2
+FROM ruby:3.2.4-alpine3.20
 
 WORKDIR /app
+
+RUN apk add make gcc g++
 
 COPY Gemfile /app/Gemfile
 COPY app.rb /app/app.rb
