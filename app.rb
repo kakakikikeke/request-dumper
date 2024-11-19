@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'sinatra/base'
 require 'json'
+require 'sinatra/base'
 require './helper/request_helper'
 
 # Main app
@@ -10,6 +10,7 @@ class RequestDumperApp < Sinatra::Base
   helpers RequestHelper
 
   configure :production, :development do
+    set :host_authorization, { permitted_hosts: [] }
     enable :logging
   end
 
