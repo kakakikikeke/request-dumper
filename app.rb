@@ -21,7 +21,7 @@ class RequestDumperApp < Sinatra::Base
 
   post '/*' do
     content_type :json
-    echo_request_info
+    echo_request
   end
 
   put '/*' do
@@ -31,7 +31,7 @@ class RequestDumperApp < Sinatra::Base
 
   delete '/*' do
     content_type :json
-    echo_request_info
+    echo_request
   end
 
   options '/*' do

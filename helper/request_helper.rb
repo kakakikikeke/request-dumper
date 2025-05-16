@@ -11,8 +11,9 @@ module RequestHelper
   private
 
   def fields # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+    body = {} unless request.body.nil?
     {
-      body: request.body.read,
+      body: body,
       params: params.to_json,
       path_info: request.path_info,
       method: request.request_method,

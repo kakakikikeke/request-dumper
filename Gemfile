@@ -3,9 +3,14 @@
 source 'https://rubygems.org'
 
 gem 'prometheus-client'
-gem 'pry'
-gem 'pry-doc'
 gem 'puma'
 gem 'rackup'
 gem 'sinatra'
-gem 'solargraph'
+
+group :development do
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'rack-test'
+  gem 'rspec'
+  gem 'solargraph'
+end

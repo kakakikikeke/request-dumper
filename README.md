@@ -18,6 +18,12 @@ docker build -f Dockerfile -t kakakikikeke/request-dumper ./
 docker run -p 8080:8080 -d kakakikikeke/request-dumper
 ```
 
+## Test
+
+```
+bundle exec rspec spec/
+```
+
 ## Heroku
 
 Deploy this app into your heroku account.  
