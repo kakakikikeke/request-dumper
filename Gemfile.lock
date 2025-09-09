@@ -57,12 +57,12 @@ GEM
     rackup (2.2.1)
       rack (>= 3)
     rainbow (3.1.1)
-    rbs (3.9.4)
+    rbs (3.9.5)
       logger
     regexp_parser (2.11.2)
     reverse_markdown (3.0.0)
       nokogiri
-    rexml (3.4.2)
+    rexml (3.4.3)
     rspec (3.13.1)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
