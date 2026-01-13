@@ -34,7 +34,7 @@ GEM
     parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
-    prism (1.7.0)
+    prism (1.8.0)
     prometheus-client (4.2.5)
       base64
     pry (0.16.0)
