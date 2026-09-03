@@ -1,7 +1,8 @@
 # request-dumper
 It dumps request info using sinatra.
 
-# How to build
+# Build
+
 ## Rack
 
 ```
@@ -18,11 +19,7 @@ docker build -f Dockerfile -t kakakikikeke/request-dumper ./
 docker run -p 8080:8080 -d kakakikikeke/request-dumper
 ```
 
-## Test
-
-```
-bundle exec rspec spec/
-```
+# Deploy
 
 ## Heroku
 
@@ -60,7 +57,7 @@ helm search repo request-dumper
 helm install request-dumper request-dumper/request-dumper
 ```
 
-# How to use
+# Usage
 
 For starting a process on local machine.
 
@@ -117,4 +114,10 @@ You can show the app metrics for prometheus.
 ```
 curl -X GET \
   http://hostname:9292/metrics
+```
+
+# Test
+
+```
+bundle exec rspec spec/
 ```

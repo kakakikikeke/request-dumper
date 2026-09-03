@@ -38,6 +38,20 @@ RSpec.describe RequestDumperApp do # rubocop:disable Metrics/BlockLength
 
   describe 'POST /*' do
     include_examples 'request echo response', :post, '/post/test', { key: 'value' }
+
+    it 'includes urlencoded form data in the body' do
+      post '/post/test', { hoge: 'fuga' }
+
+      expect(last_response.status).to eq(200)
+      expect(JSON.parse(last_response.body)['body']).to eq('hoge' => 'fuga')
+    end
+
+    it 'includes JSON data in the body' do
+      post '/post/test', '{"hoge":"fuga"}', { 'CONTENT_TYPE' => 'application/json' }
+
+      expect(last_response.status).to eq(200)
+      expect(JSON.parse(last_response.body)['body']).to eq('hoge' => 'fuga')
+    end
   end
 
   describe 'PUT /*' do
