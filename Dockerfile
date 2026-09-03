@@ -5,6 +5,7 @@ WORKDIR /app
 RUN apk add make gcc g++ yaml-dev
 
 COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 COPY app.rb /app/app.rb
 COPY config.ru /app/config.ru
 COPY helper/request_helper.rb /app/helper/request_helper.rb
@@ -12,6 +13,9 @@ COPY helper/custom_controller.rb /app/helper/custom_controller.rb
 COPY helper/custom_exporter.rb /app/helper/custom_exporter.rb
 
 EXPOSE 8080
-RUN gem install bundler
-RUN bundle install
+RUN gem install bundler -v 2.5.16
+RUN bundle config set deployment true && bundle install
+RUN addgroup -S request-dumper && adduser -S request-dumper -G request-dumper \
+	&& chown -R request-dumper:request-dumper /app
+USER request-dumper
 CMD ["bundle", "exec", "rackup", "config.ru", "-o", "0.0.0.0", "-p", "8080"]

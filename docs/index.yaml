@@ -2,32 +2,42 @@ apiVersion: v1
 entries:
   request-dumper:
   - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2026-09-03T17:00:40.290873+09:00"
+    description: It dumps request info using sinatra.
+    digest: 65f6fb45c377069f271472c1755c6edac68e201aee106b519f59a482b60b4126
+    name: request-dumper
+    type: application
+    urls:
+    - https://kakakikikeke.github.io/request-dumper/request-dumper-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 0.0.3
-    created: "2021-08-31T15:12:47.253103+09:00"
+    created: "2026-09-03T17:00:40.28981+09:00"
     description: It dumps request info using sinatra.
     digest: 2dbf6b0c5273c1589f6e3916c6a9627705f5fb51b4a085fb11652b5ceab4b804
     name: request-dumper
     type: application
     urls:
-    - http://kakakikikeke.github.io/request-dumper/request-dumper-0.1.2.tgz
+    - https://kakakikikeke.github.io/request-dumper/request-dumper-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2021-08-31T15:12:47.248358+09:00"
+    created: "2026-09-03T17:00:40.289565+09:00"
     description: It dumps request info using sinatra.
     digest: df772fb8b0551fdf93499958b549e7949719dbc83a6e39f5871c6b3c085fa300
     name: request-dumper
     urls:
-    - http://kakakikikeke.github.io/request-dumper/request-dumper-0.1.1.tgz
+    - https://kakakikikeke.github.io/request-dumper/request-dumper-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2021-08-31T15:12:47.245533+09:00"
+    created: "2026-09-03T17:00:40.289216+09:00"
     description: It dumps request info using sinatra.
     digest: 2f2eae87358d5d2774f50ad47bcbd90f06e8d9dc62aa9411a94db8f37461d0e1
     name: request-dumper
     type: application
     urls:
-    - http://kakakikikeke.github.io/request-dumper/request-dumper-0.1.0.tgz
+    - https://kakakikikeke.github.io/request-dumper/request-dumper-0.1.0.tgz
     version: 0.1.0
-generated: "2021-08-31T15:12:47.241851+09:00"
+generated: "2026-09-03T17:00:40.288078+09:00"
