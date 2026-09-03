@@ -1,5 +1,5 @@
 # request-dumper
-It dumps request info using [sinatra](http://www.sinatrarb.com/).
+It dumps request info using sinatra.
 
 # How to build
 ## Rack
@@ -54,7 +54,7 @@ gcloud app deploy
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/request-dumper)](https://artifacthub.io/packages/search?repo=request-dumper)
 
 ```
-helm repo add request-dumper http://kakakikikeke.github.io/request-dumper/
+helm repo add request-dumper https://kakakikikeke.github.io/request-dumper/
 helm repo update
 helm search repo request-dumper
 helm install request-dumper request-dumper/request-dumper
@@ -118,9 +118,3 @@ You can show the app metrics for prometheus.
 curl -X GET \
   http://hostname:9292/metrics
 ```
-
-# Version
-
-* Ruby 3.0.0
-* Gem 2.4.6
-* Other libraries version confirm to Gemfile
