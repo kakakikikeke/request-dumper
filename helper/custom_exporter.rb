@@ -7,8 +7,8 @@ module Prometheus
     # A custom exporter for prometheus
     class CustomExporter < Prometheus::Middleware::Exporter
       def respond_with(format)
-        guage = @registry.metrics.first
-        guage.set(
+        gauge = @registry.get(:online_flag)
+        gauge.set(
           online?,
           labels: {
             name: :my_site
@@ -18,7 +18,7 @@ module Prometheus
       end
 
       def online?
-        0
+        1
       end
     end
   end
