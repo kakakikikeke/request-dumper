@@ -14,6 +14,16 @@ class RequestDumperApp < Sinatra::Base
     enable :logging
   end
 
+  configure :development, :test do
+    set :show_exceptions, :after_handler
+  end
+
+  error JSON::ParserError do
+    content_type :json
+    status 400
+    { error: 'Invalid JSON request body' }.to_json
+  end
+
   get '/*' do
     content_type :json
     echo_request

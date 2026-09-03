@@ -66,21 +66,6 @@ curl -X GET \
   http://hostname:8080/test?hoge=fuga
 ```
 
-You get the below json response.
-
-```
-{
-    "body": "\"\"",
-    "params": "{\"hoge\":\"fuga\",\"splat\":[\"test\"],\"captures\":[\"test\"]}",
-    "path_info": "/test",
-    "method": "GET",
-    "query_string": "hoge=fuga",
-    "content_length": null,
-    "media_type": null,
-    "form_data": false
-}
-```
-
 * POST
 
 ```
@@ -88,21 +73,6 @@ curl -X POST \
   http://hostname:8080/test \
   -d '{"hoge":"fuga"}' \
   -H "Content-Type: application/json"
-```
-
-You get the below json response.
-
-```
-{
-    "body": "{\"hoge\":\"fuga\"}",
-    "params": "{\"splat\":[\"test\"],\"captures\":[\"test\"]}",
-    "path_info": "/test",
-    "method": "POST",
-    "query_string": "",
-    "content_length": "15",
-    "media_type": "application/json",
-    "form_data": false
-}
 ```
 
 * Bonus
@@ -117,5 +87,6 @@ curl -X GET \
 # Test
 
 ```
+bundle exec rubocop .
 bundle exec rspec spec/
 ```

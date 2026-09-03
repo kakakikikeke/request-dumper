@@ -39,6 +39,14 @@ RSpec.describe RequestDumperApp do # rubocop:disable Metrics/BlockLength
   describe 'POST /*' do
     include_examples 'request echo response', :post, '/post/test', { key: 'value' }
 
+    it 'returns a bad request response for invalid JSON' do
+      post '/post/test', '{', { 'CONTENT_TYPE' => 'application/json' }
+
+      expect(last_response.status).to eq(400)
+      expect(last_response.content_type).to include('application/json')
+      expect(JSON.parse(last_response.body)).to eq('error' => 'Invalid JSON request body')
+    end
+
     it 'includes urlencoded form data in the body' do
       post '/post/test', { hoge: 'fuga' }
 
