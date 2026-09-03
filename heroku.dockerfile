@@ -2,6 +2,8 @@ FROM ruby:4.0.5-alpine3.23
 
 WORKDIR /app
 
+RUN apk add make gcc g++ yaml-dev
+
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 COPY app.rb /app/app.rb
@@ -16,4 +18,4 @@ RUN bundle config set deployment true && bundle install
 RUN addgroup -S request-dumper && adduser -S request-dumper -G request-dumper \
 	&& chown -R request-dumper:request-dumper /app
 USER request-dumper
-CMD bundle exec puma -C puma.rb -b tcp://0.0.0.0:$PORT config.ru
+CMD ["bundle", "exec", "puma", "-C", "puma.rb", "-b", "tcp://0.0.0.0:8080", "config.ru"]

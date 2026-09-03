@@ -30,7 +30,7 @@ Deploy this app into your heroku account.
 ```
 heroku container:login
 heroku create -a test-app-20181002
-docker build -f Dockerfile-for-heroku-container -t registry.heroku.com/test-app-20181002/web .
+docker build -f heroku.dockerfile -t registry.heroku.com/test-app-20181002/web .
 docker push registry.heroku.com/test-app-20181002/web
 heroku container:release web
 heroku open -a test-app-20181002
