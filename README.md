@@ -7,10 +7,8 @@ It dumps request info using sinatra.
 
 ```
 bundle install
-bundle exec rackup config.ru -o 0.0.0.0
+bundle exec puma -C puma.rb -b tcp://0.0.0.0:8080 config.ru
 ```
-
-It was listened to 9292 port on your server.
 
 ## Docker
 
@@ -59,13 +57,13 @@ helm install request-dumper request-dumper/request-dumper
 
 # Usage
 
-For starting a process on local machine.
+For starting a process on local machine. The server listens on port 8080.
 
 * GET
 
 ```
 curl -X GET \
-  http://hostname:9292/test?hoge=fuga
+  http://hostname:8080/test?hoge=fuga
 ```
 
 You get the below json response.
@@ -87,7 +85,7 @@ You get the below json response.
 
 ```
 curl -X POST \
-  http://hostname:9292/test \
+  http://hostname:8080/test \
   -d '{"hoge":"fuga"}' \
   -H "Content-Type: application/json"
 ```
@@ -113,7 +111,7 @@ You can show the app metrics for prometheus.
 
 ```
 curl -X GET \
-  http://hostname:9292/metrics
+  http://hostname:8080/metrics
 ```
 
 # Test
