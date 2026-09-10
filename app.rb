@@ -2,12 +2,13 @@
 
 require 'json'
 require 'sinatra/base'
-require './helper/request_helper'
+require './repository/request_repository'
+require './service/request_service'
+require './controller/request_controller'
 
 # Main app
 class RequestDumperApp < Sinatra::Base
   set :bind, '0.0.0.0'
-  helpers RequestHelper
 
   configure :production, :development do
     set :host_authorization, { permitted_hosts: [] }
@@ -47,5 +48,13 @@ class RequestDumperApp < Sinatra::Base
   options '/*' do
     content_type :json
     echo_request
+  end
+
+  private
+
+  def echo_request
+    repository = RequestRepository.new(request)
+    service = RequestService.new(repository, logger)
+    RequestController.new(service).echo
   end
 end

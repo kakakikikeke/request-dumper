@@ -9,7 +9,9 @@ COPY Gemfile.lock /app/Gemfile.lock
 COPY app.rb /app/app.rb
 COPY config.ru /app/config.ru
 COPY puma.rb /app/puma.rb
-COPY helper/request_helper.rb /app/helper/request_helper.rb
+COPY controller /app/controller
+COPY repository /app/repository
+COPY service /app/service
 COPY helper/custom_controller.rb /app/helper/custom_controller.rb
 COPY helper/custom_exporter.rb /app/helper/custom_exporter.rb
 
