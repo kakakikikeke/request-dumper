@@ -2,7 +2,7 @@ FROM ruby:4.0.5-alpine3.23
 
 WORKDIR /app
 
-RUN apk add make gcc g++ yaml-dev
+RUN apk --no-cache add make gcc g++ yaml-dev
 
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
